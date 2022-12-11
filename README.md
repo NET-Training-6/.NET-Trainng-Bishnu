@@ -22,3 +22,8 @@
 > git push
 ```
 (For first time, authorize popup may appear)
+
+
+# Assignments
+    1. Add new random image in your cloned repo and publish that to remote github.
+  
