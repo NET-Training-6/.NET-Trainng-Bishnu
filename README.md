@@ -16,6 +16,7 @@
 > git config user.email rawal.bishnu@gmail.com
 > git config user.name "Bishnu Rawal"
 ```
+
 ```
 > git add .
 > git commit -m "sensible commit message"
@@ -26,4 +27,5 @@
 
 # Assignments
     1. Add new random image in your cloned repo and publish that to remote github.
-  
+    
+## Will be adding more assignments here...
