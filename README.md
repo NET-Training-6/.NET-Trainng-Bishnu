@@ -24,8 +24,7 @@
 ```
 (For first time, authorize popup may appear)
 
-
 # Assignments
-    1. Add new random image in your cloned repo and publish that to remote github.
-    
-## Will be adding more assignments here...
+1. Add new random image in your cloned repo and publish that to remote github.  
+1. Find if user supplied number is multiple of 3 and 5
+1. Ask user to enter height and weight in metric unit and calculate BMI index for that user.
