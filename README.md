@@ -28,3 +28,4 @@
 1. Add new random image in your cloned repo and publish that to remote github.  
 1. Find if user supplied number is multiple of 3 and 5
 1. Ask user to enter height and weight in metric unit and calculate BMI index for that user.
+1. Define a class representing an animal with at least 6 fields and a method. Create 5 objects/instances from this class in our entrypoint.
