@@ -29,3 +29,7 @@
 1. Find if user supplied number is multiple of 3 and 5
 1. Ask user to enter height and weight in metric unit and calculate BMI index for that user.
 1. Define a class representing an animal with at least 6 fields and a method. Create 5 objects/instances from this class in our entrypoint.
+1. Create appropriate data strcuture for following:
+    1. Hold names of 10 people and print them to standard console.
+    1. Store salaries of 6 people in a variable and print only the largest to console.
+ 
