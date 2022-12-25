@@ -1,4 +1,5 @@
-﻿class EntryPoint
+﻿using Basics;
+class EntryPoint
 {
     public static void Main()
     {

@@ -1,3 +1,5 @@
+
+namespace Basics;
 class Variable
 {
     void LearnVariables()
