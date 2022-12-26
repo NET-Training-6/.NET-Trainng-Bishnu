@@ -15,7 +15,10 @@ class EntryPoint
         // Person person7 = new();
         // Person person8 = new();
 
-        ArrayLearner al = new();
-        al.LearnArrays();
+        // ArrayLearner al = new();
+        // al.LearnArrays();
+
+        Loop l = new();
+        l.LearnLoops();
     }
 }
