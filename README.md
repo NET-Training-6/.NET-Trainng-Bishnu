@@ -32,4 +32,28 @@
 1. Create appropriate data strcuture for following:
     1. Hold names of 10 people and print them to standard console.
     1. Store salaries of 6 people in a variable and print only the largest to console.
- 
+1. Print following patterns:
+    ```
+    #
+    ##
+    ###
+    ####
+    #####
+    ######
+    ```
+    ```
+    1
+    12
+    123
+    1234
+    12345
+    123456
+    ```
+    ```
+    666666
+    55555
+    4444
+    333
+    22
+    1
+    ```
