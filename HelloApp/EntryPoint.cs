@@ -18,7 +18,13 @@ class EntryPoint
         // ArrayLearner al = new();
         // al.LearnArrays();
 
-        Loop l = new();
-        l.LearnLoops();
+        MethodLearner ml = new();
+        ml.Print();
+        ml.Print();
+
+        ml.PrintMessage("638756");
+        var s = ml.Sum(23423.242, 4535.23);
+
+        var x = ml.IsEven(314243);
     }
 }
