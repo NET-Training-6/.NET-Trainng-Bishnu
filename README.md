@@ -57,3 +57,9 @@
     22
     1
     ```
+1. Think of a real world scenario for following:
+    1. Class 1 should has some fields and methods
+    2. Class 2 inherits Class 1
+    1. Class 3 has some fields on it
+    3. Interface 1 have some method definitions
+    1. Class 2 and Class 3 implements Interface 1
