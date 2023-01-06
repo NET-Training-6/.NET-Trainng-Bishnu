@@ -14,15 +14,18 @@ public class Car
     readonly byte gears = 6;    // Runtime
     static byte seats = 4;
 
-    void Test()
+    public void Test()
     {
         //noOfWheels = 5;
-        Car car1 = new();
-        car1.vendor = "TaTa";
+        // Car car1 = new();
+        // car1.vendor = "TaTa";
 
-        Car.seats = 5;        
+        // Car.seats = 5;
+        // Console.WriteLine();
 
-        Console.WriteLine();
+        // string name = "Kishan Karki";   // initials: KK
+        // var parts = name.Split(" ");
+        // var initials = parts[0][0] + parts[1][0];
     }
 }
 

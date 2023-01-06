@@ -53,15 +53,25 @@ class EntryPoint
 
         // Console.WriteLine($"Area of room r2: {rr} square inch");
 
-        var r1 = new Rectangle(34.35, 12.45);
-        r1.GetArea();
-        r1.GetPerimeter();
-        r1.PrintDetails();
+        // var r1 = new Rectangle(34.35, 12.45);
+        // r1.GetArea();
+        // r1.GetPerimeter();
+        // r1.PrintDetails();
 
-        var s1 = new Square(24.35);
-        s1.GetArea();
-        s1.GetPerimeter();
-        s1.PrintDetails();
+        // var s1 = new Square(24.35);
+        // s1.GetArea();
+        // s1.GetPerimeter();
+        // s1.PrintDetails();
+
+        // I have a string variable called address which holds value like 
+        // "Tinkune, Kathmandu, Nepal"
+        // 1. Print locality name
+        // 2. Print City name
+        // 3. Print Country name
+
+        var address = "Tinkune, Kathmandu-Nepal";
+        var parts = address.Split(new char[] { ',', '-' });
+        Console.WriteLine($"Locality: {parts[0]}, City: {parts[1]}, Country: {parts[2]}");
 
     }
 }

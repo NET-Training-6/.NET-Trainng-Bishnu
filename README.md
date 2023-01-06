@@ -63,3 +63,15 @@
     1. Class 3 has some fields on it
     3. Interface 1 have some method definitions
     1. Class 2 and Class 3 implements Interface 1
+
+1. We have a paragraph and do following for the same.
+```
+        var story = @"A Boy was given permission to put his hand into a, \\
+            pitcher to get some filberts. But he took such a great fistful \\
+            that he could not draw his hand out again. There he stood, unwilling \\
+            to give up a single filbert and yet unable to get them all out at once. \\
+            Vexed and disappointed he began to cry.";
+```
+    1. Count number of sentences
+    1. Count number of words and 
+    1. Count number of characters
