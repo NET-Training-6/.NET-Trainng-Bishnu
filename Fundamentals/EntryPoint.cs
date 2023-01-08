@@ -75,5 +75,7 @@ class EntryPoint
 
         Paragraph p1 = new();
         p1.CountSentences();
+        p1.CountWords();
+        p1.CountCharacters();
     }
 }
