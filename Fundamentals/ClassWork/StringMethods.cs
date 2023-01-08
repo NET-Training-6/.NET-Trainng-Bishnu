@@ -58,6 +58,15 @@ class Paragraph
             }
         }
         Console.WriteLine($"Character Counts: {x-noOfSpaces} and characters are following:");
+    }
 
+    public void GetFrequenciesOfCharacters()
+    {
+        // Loop through string variable story
+        // If its 'A', increment A's count by 1
+        // If its 'B', increment B's count by 1
+        //...............................
+        // If its 'Z', increment Z's count by 1
+        
     }
 }
