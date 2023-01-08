@@ -76,3 +76,4 @@
     1. Count number of sentences
     1. Count number of words and 
     1. Count number of characters
+    1. Count frequencies each characters: aplhabets, numbers and special characters, exclude space, tab and new line.
