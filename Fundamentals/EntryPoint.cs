@@ -69,9 +69,11 @@ class EntryPoint
         // 2. Print City name
         // 3. Print Country name
 
-        var address = "Tinkune, Kathmandu-Nepal";
-        var parts = address.Split(new char[] { ',', '-' });
-        Console.WriteLine($"Locality: {parts[0]}, City: {parts[1]}, Country: {parts[2]}");
+        // var address = "Tinkune, Kathmandu-Nepal";
+        // var parts = address.Split(new char[] { ',', '-' });
+        // Console.WriteLine($"Locality: {parts[0]}, City: {parts[1]}, Country: {parts[2]}");
 
+        Paragraph p1 = new();
+        p1.CountSentences();
     }
 }
