@@ -73,9 +73,12 @@ class EntryPoint
         // var parts = address.Split(new char[] { ',', '-' });
         // Console.WriteLine($"Locality: {parts[0]}, City: {parts[1]}, Country: {parts[2]}");
 
-        Paragraph p1 = new();
-        p1.CountSentences();
-        p1.CountWords();
-        p1.CountCharacters();
+        // Paragraph p1 = new();
+        // p1.CountSentences();
+        // p1.CountWords();
+        // p1.CountCharacters();
+
+        CollectionLearner cl = new();
+        cl.LearnLists();
     }
 }

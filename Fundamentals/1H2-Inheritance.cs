@@ -1,6 +1,8 @@
 // Write a class for rectangle, this class should have methods to calulate
 // area and perimeter.
 
+using System;
+
 class Rectangle: IShape
 {
     double length;

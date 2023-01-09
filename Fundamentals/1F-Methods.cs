@@ -1,3 +1,5 @@
+using System;
+
 class MethodLearner
 {
     // 1. Method that returns nothing and takes no arguments

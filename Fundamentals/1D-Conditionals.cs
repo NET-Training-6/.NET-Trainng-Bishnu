@@ -1,3 +1,5 @@
+using System;
+
 class ConditionalLearner
 {
     // Ask user to enter his total percentage and greet him as following:
