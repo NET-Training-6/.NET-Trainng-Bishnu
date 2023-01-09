@@ -77,3 +77,6 @@
     1. Count number of words and 
     1. Count number of characters
     1. Count frequencies each characters: aplhabets, numbers and special characters, exclude space, tab and new line.
+
+1. Create list of at least 10 numbers and print in console only the numbers multiple of 3 an 5.
+1. Create list of date of births of 8 people. Print those dobs in console oldest first.
