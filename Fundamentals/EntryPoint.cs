@@ -79,6 +79,6 @@ class EntryPoint
         // p1.CountCharacters();
 
         CollectionLearner cl = new();
-        cl.LearnLists();
+        cl.LearnDictionary();        
     }
 }
