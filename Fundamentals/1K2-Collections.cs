@@ -51,8 +51,6 @@ class CollectionLearner
         countries.Add(("Nepal", 2342535345, 1423434.45));
         countries.Add(("India", 2342342535345, 981423434.45));
         countries.Add(("China", 23999935345, 93481423434.45));
-
-        
     }
 }
 

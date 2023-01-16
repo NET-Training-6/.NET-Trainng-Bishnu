@@ -78,7 +78,10 @@ class EntryPoint
         // p1.CountWords();
         // p1.CountCharacters();
 
-        CollectionLearner cl = new();
-        cl.LearnDictionary();        
+        // CollectionLearner cl = new();
+        // cl.LearnDictionary();  
+
+        Linq linq = new();
+        linq.Test();      
     }
 }
