@@ -80,3 +80,32 @@
 
 1. Create list of at least 10 numbers and print in console only the numbers multiple of 3 an 5.
 1. Create list of date of births of 8 people. Print those dobs in console oldest first.
+1. Given the collection
+    ```
+    List<string> names = new() { "Bishnu", "Ab", "Prem", "Em", "Sajan", "Naresh", "Arjun", "Prabis" };
+    ```
+    1. Get all person names with less than 4 characters and convert them to uppercase.
+    1. Get initial (first letter) of names which contains "is" in it.
+1. Create a class called "Country" with fields "Name", "Area", "Continent" and "GDP". Then create list of 10 countries like:
+    ```
+    List<Country> countries = new() 
+    { 
+        new Country 
+        { 
+            Name = "Nepal",
+            Continent = "Asia"
+            Area = 17823783.23,
+            GDP = 79247984728
+        },
+        new Country 
+        { 
+            Name = "USA",
+            Continent = "North America"
+            Area = 9817823783.23,
+            GDP = 9999997823798472
+        }
+    };
+    ```
+    And answer following:
+    1. Find all asian countries.
+    1. Find top 5 poorest countries.
