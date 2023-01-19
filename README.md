@@ -106,6 +106,6 @@
         }
     };
     ```
-    And answer following:
+    And answer following in both method and expression syntax:
     1. Find all asian countries.
-    1. Find top 5 poorest countries.
+    1. Find top 5 poorest countries. (Use OrderBy())
