@@ -82,6 +82,6 @@ class EntryPoint
         // cl.LearnDictionary();  
 
         Linq linq = new();
-        linq.Test();      
+        linq.LearnToQueryComplexCollection();      
     }
 }
