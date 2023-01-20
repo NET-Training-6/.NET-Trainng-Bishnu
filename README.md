@@ -109,3 +109,5 @@
     And answer following in both method and expression syntax:
     1. Find all asian countries.
     1. Find top 5 poorest countries. (Use OrderBy())
+1. File and Directory Handling:
+    1. Create 20 folders A, B, C, ... T. In each folder there should be a file with name same as its parent folder and that file should contain current datetime stamp.
