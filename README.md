@@ -111,3 +111,9 @@
     1. Find top 5 poorest countries. (Use OrderBy())
 1. File and Directory Handling:
     1. Create 20 folders A, B, C, ... T. In each folder there should be a file with name same as its parent folder and that file should contain current datetime stamp.
+
+1. Create a web page containing following:
+    1. A list of 10 countries, list items should have italic fonts and size of 30 pixels.
+    1. A table with countries (Country Name, Capital, Pouplation etc.) applying border of 4 pixel thick.
+    1. Create external css file to apply design to your page.
+ 
