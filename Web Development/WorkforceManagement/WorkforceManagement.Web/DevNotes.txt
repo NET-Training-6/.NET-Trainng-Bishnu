@@ -1,0 +1,9 @@
+
+HRM
+- Models (Entities)
+-- Employees (Id, Name, Address, Gender, JoinDate, Department, Designation, Dob, Contact etc.)
+-- Designations (Id, Title, Description)
+-- Departments (Id, Name, Description, EstalblishedDate)
+-- Benefits (Salary, Bonus, PF, SSF, CIT, Insurrance, Year, Tax)
+
+Data Access
