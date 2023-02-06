@@ -1,0 +1,16 @@
+﻿@model (int from, int to)
+<h2>Multiplication table</h2>
+
+<div class="row">
+
+    @for (int j = Model.from; j <= Model.to; j++)
+    {
+        <div class="col-3 border-4">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <i>@j * @i = @(j * i)</i>
+                <br />
+            }
+        </div>
+    }
+</div>

@@ -1,36 +1,24 @@
-﻿<h1>Student Home Page</h1>
+﻿@model List<Student>
+
+<h1>Student Home Page</h1>
 
 <table class="table">
-  <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>twitter</td>
-    </tr>
-  </tbody>
+    @foreach(Student s in Model)
+    {
+        <tr>
+            <td>@s.Name</td>
+            <td>@s.Address</td>
+            <td>@s.Email</td>
+            <td>@s.Dob</td>
+            <td>@s.Gender</td>
+        </tr>
+    }
+    
 </table>
