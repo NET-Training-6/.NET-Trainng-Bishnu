@@ -6,4 +6,10 @@ HRM
 -- Departments (Id, Name, Description, EstalblishedDate)
 -- Benefits (Salary, Bonus, PF, SSF, CIT, Insurrance, Year, Tax)
 
-Data Access
+Data Access (Datbase Programming)
+-- ADO (Active Data Objects)
+-- ADO.NET
+-- ORM (Object Relational Mapper) Tool: *EF (Entity Framework) Core, Dapper, NHibernate, RepoDb etc.
+-- Databases
+--- Relational Dbs: *Microsoft SQL Server, SQLite, Postgres, MySql, Oracle etc. 
+--- No Sql Dbs: MongoDb, AWS DynamoDb etc.
