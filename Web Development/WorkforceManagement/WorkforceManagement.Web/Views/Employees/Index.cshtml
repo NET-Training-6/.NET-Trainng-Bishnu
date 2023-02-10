@@ -7,11 +7,9 @@
         <th>Address</th>
         <th>Date of Birth</th>
         <th>Contact</th>
-        <th>Join Date</th>
-        <th>Department</th>
-        <th>Designation</th>
+        <th></th>
     </tr>
-    @foreach(Employee emp in Model)
+    @foreach (Employee emp in Model)
     {
         <tr>
             <td>@emp.Name</td>
@@ -19,9 +17,11 @@
             <td>@emp.Address</td>
             <td>@emp.Dob</td>
             <td>@emp.Contact</td>
-            <td>@emp.JoinDate</td>
-            <td>@emp.Department</td>
-            <td>@emp.Designation</td>
+            <td>
+                <a href="/employees/details/@emp.Id"><i class="bi bi-eye"></i></a>
+                <a href="/employees/details/@emp.Id"><i class="bi bi-pen text-warning"></i></a>
+                <a href="/employees/details/@emp.Id"><i class="bi bi-trash text-danger"></i></a>
+            </td>
         </tr>
-    }    
+    }
 </table>

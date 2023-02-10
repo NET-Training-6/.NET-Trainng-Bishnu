@@ -2,6 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using WorkforceManagement.Web.Data;
 using WorkforceManagement.Web.Enums;
 using WorkforceManagement.Web.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -9,33 +10,20 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace WorkforceManagement.Web.Controllers;
 public class EmployeesController : Controller
 {
+    WorkforceContext db = new WorkforceContext();
+
     public IActionResult Index()
     {
-        Employee employee1 = new Employee
-        {
-            Name = "Bishnu Rawal",
-            Gender = Gender.Male,
-            Contact = "7983798789",
-            Address = "Kathmandu",
-            Dob = new DateTime(1988, 12, 23),
-            Department = "Research & Development",
-            Designation = "Software Architect"
-        };
-
-        Employee employee2 = new Employee
-        {
-            Name = "Bishnu Rawal",
-            Gender = Gender.Male,
-            Contact = "7983798789",
-            Address = "Kathmandu",
-            Dob = new DateTime(1988, 12, 23),
-            Department = "Research & Development",
-            Designation = "Software Architect"
-        };
-
-        List<Employee> employees = new() { employee1, employee2 };
+        List<Employee> employees = db.Employees.ToList();
 
         return View(employees);
+    }
+        
+    public IActionResult Details(int id) 
+    {
+        var employee = db.Employees.Find(id);
+
+        return View(employee);
     }
 
     public IActionResult GetData()
