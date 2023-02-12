@@ -39,6 +39,21 @@ public class EmployeesController : Controller
         return RedirectToAction("Index");
     }
 
+    public IActionResult Edit(int id)
+    {
+        var employee = db.Employees.Find(id);
+        return View(employee);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Employee employee)
+    {
+        db.Employees.Update(employee);
+        db.SaveChanges();
+
+        return RedirectToAction("Index");
+    }
+
 
     public IActionResult GetData()
     {
