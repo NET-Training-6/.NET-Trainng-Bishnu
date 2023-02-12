@@ -1,12 +1,18 @@
 ﻿@model Employee
 
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">@Model.Name</li>
-    <li class="list-group-item">@Model.Address</li>
-    <li class="list-group-item">@Model.Gender</li>
-    <li class="list-group-item">@Model.Contact</li>
-    <li class="list-group-item">@Model.Dob</li>
-    <li class="list-group-item">@Model.JoinDate</li>
-    <li class="list-group-item">@Model.Department</li>
-    <li class="list-group-item">@Model.Designation</li>
-</ul>
+<div class="card text-center">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Name Details</h5>
+    <p class="card-text">
+        <p><b>Name</b> @Model.Name</p>
+        <p><b>Address</b> @Model.Address</p>
+        <p><b>Gender</b> @Model.Gender</p>
+        <p><b>Contact</b> @Model.Contact</p>
+        <p><b>Date of Birth</b> @Model.Dob</p>
+        <p><b>Join Date</b> @Model.JoinDate</p>
+        <p><b>Department</b> @Model.Department</p>
+        <p></p><b>Designation</b> @Model.Designation</p>
+    </p>
+    <a href="/employees/index" class="btn btn-success">Back to List</a>
+  </div>
+</div>

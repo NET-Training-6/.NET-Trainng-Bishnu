@@ -1,30 +1,44 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using WorkforceManagement.Web.Data;
-using WorkforceManagement.Web.Enums;
 using WorkforceManagement.Web.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorkforceManagement.Web.Controllers;
 public class EmployeesController : Controller
 {
     WorkforceContext db = new WorkforceContext();
 
+    [HttpGet]
     public IActionResult Index()
     {
         List<Employee> employees = db.Employees.ToList();
 
         return View(employees);
     }
-        
+
+    [HttpGet]
     public IActionResult Details(int id) 
     {
         var employee = db.Employees.Find(id);
 
         return View(employee);
     }
+
+    [HttpGet]
+    public IActionResult Add()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Add(Employee employee)
+    {
+        db.Employees.Add(employee);
+        db.SaveChanges();
+
+        return RedirectToAction("Index");
+    }
+
 
     public IActionResult GetData()
     {
