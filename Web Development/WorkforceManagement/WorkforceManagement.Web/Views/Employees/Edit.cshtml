@@ -8,7 +8,7 @@
 
 <div class="card border-2">
     <div class="card-body">
-        <form class="row g-3" action="/employees/edit" method="post">
+        <form class="row g-3" action="/employees/edit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for=Id />
 
             <div class="col-md-6">
@@ -58,6 +58,14 @@
             <div class="col-md-6">
                 <label asp-for=Designation class="form-label"></label>
                 <input asp-for=Designation class="form-control">
+            </div>
+
+            <div class="col-md-8">
+                <label asp-for="ProfileImage" class="form-label"></label>
+                <input class="form-control" asp-for="ProfileImage">                
+            </div>
+            <div class="col-md-4">
+                <img src="@Model.ProfileImagePath" Height="80" class="mt-2" />
             </div>
 
             <div class="col-12">

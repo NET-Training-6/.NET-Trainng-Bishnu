@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using WorkforceManagement.Web.Data;
+using WorkforceManagement.Web.Helpers;
 using WorkforceManagement.Web.Models;
 
 namespace WorkforceManagement.Web.Controllers;
@@ -33,6 +34,9 @@ public class EmployeesController : Controller
     [HttpPost]
     public IActionResult Add(Employee employee)
     {
+        var relativePath = ProfileImageHelper.SaveImage(employee.ProfileImage);
+        employee.ProfileImagePath = relativePath;
+        
         db.Employees.Add(employee);
         db.SaveChanges();
 
@@ -48,6 +52,9 @@ public class EmployeesController : Controller
     [HttpPost]
     public IActionResult Edit(Employee employee)
     {
+        var relativePath = ProfileImageHelper.SaveImage(employee.ProfileImage);
+        employee.ProfileImagePath = relativePath;
+
         db.Employees.Update(employee);
         db.SaveChanges();
 

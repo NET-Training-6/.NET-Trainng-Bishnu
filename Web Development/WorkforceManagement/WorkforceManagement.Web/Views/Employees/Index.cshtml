@@ -2,21 +2,34 @@
 
 <table class="table">
     <tr>
+        <th></th>
         <th>Name</th>
         <th>Gender</th>
         <th>Address</th>
-        <th>Date of Birth</th>
         <th>Contact</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Join Date</th>
         <th></th>
     </tr>
     @foreach (Employee emp in Model)
     {
         <tr>
+            <td>
+                @{
+                    var avatar = string.IsNullOrEmpty(emp.ProfileImagePath)
+                                ? "/images/person.png"
+                                : emp.ProfileImagePath;
+                }
+                <img src="@avatar" alt="person" height="30" class="rounded-circle" />
+            </td>
             <td>@emp.Name</td>
             <td>@emp.Gender</td>
             <td>@emp.Address</td>
-            <td>@emp.Dob</td>
             <td>@emp.Contact</td>
+            <td>@emp.Department</td>
+            <td>@emp.Designation</td>
+            <td>@emp.JoinDate</td>
             <td>
                 <a href="/employees/details/@emp.Id"><i class="bi bi-eye"></i></a>
                 <a href="/employees/edit/@emp.Id"><i class="bi bi-pen text-warning"></i></a>
