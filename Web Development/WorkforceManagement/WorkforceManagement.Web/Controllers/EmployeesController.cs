@@ -2,7 +2,9 @@
 using System.Data.SqlClient;
 using WorkforceManagement.Web.Data;
 using WorkforceManagement.Web.Helpers;
+using WorkforceManagement.Web.Mappers;
 using WorkforceManagement.Web.Models;
+using WorkforceManagement.Web.ViewModels;
 
 namespace WorkforceManagement.Web.Controllers;
 public class EmployeesController : Controller
@@ -13,8 +15,16 @@ public class EmployeesController : Controller
     public IActionResult Index()
     {
         List<Employee> employees = db.Employees.ToList();
+        List<EmployeeViewModel> employeesViewModels = employees.Select(x => new EmployeeViewModel() 
+        {
+            Address= x.Address,
+            Contact = x.Contact,
+            Department= x.Department,
+            Designation = x.Designation,
+            Dob = x.Dob
+        }).ToList();
 
-        return View(employees);
+        return View(employeesViewModels);
     }
 
     [HttpGet]
@@ -32,11 +42,13 @@ public class EmployeesController : Controller
     }
 
     [HttpPost]
-    public IActionResult Add(Employee employee)
+    public IActionResult Add(EmployeeViewModel employeeViewModel)
     {
-        var relativePath = ProfileImageHelper.SaveImage(employee.ProfileImage);
+        var relativePath = employeeViewModel.ProfileImage?.SaveImage();
+
+        var employee = EmployeeMapper.MapToModel(employeeViewModel);
+
         employee.ProfileImagePath = relativePath;
-        
         db.Employees.Add(employee);
         db.SaveChanges();
 
@@ -50,10 +62,12 @@ public class EmployeesController : Controller
     }
 
     [HttpPost]
-    public IActionResult Edit(Employee employee)
+    public IActionResult Edit(EmployeeViewModel employeeViewModel)
     {
-        var relativePath = ProfileImageHelper.SaveImage(employee.ProfileImage);
-        employee.ProfileImagePath = relativePath;
+        var relativePath = employeeViewModel.ProfileImage?.SaveImage();
+        employeeViewModel.ProfileImagePath = relativePath;
+
+        var employee = EmployeeMapper.MapToModel(employeeViewModel);
 
         db.Employees.Update(employee);
         db.SaveChanges();

@@ -1,4 +1,4 @@
-namespace WorkforceManagement.Web.Models
+namespace WorkforceManagement.Web.ViewModels
 {
     public class ErrorViewModel
     {

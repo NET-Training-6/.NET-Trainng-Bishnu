@@ -1,9 +1,23 @@
-﻿@model Employee
-
-@using WorkforceManagement.Web.Enums;
+﻿@model EmployeeViewModel
 
 @{
     string[] genders = Enum.GetNames<Gender>();
+    SelectListItem[] departments =
+    {
+        new SelectListItem { Text = "Select department...", Value=""},
+        new SelectListItem { Text = "Research & Development", Value="rnd"},
+        new SelectListItem { Text = "Operations", Value="operations"},
+        new SelectListItem { Text = "IT", Value="it"}
+    };
+
+    SelectListItem[] designations =
+    {
+        new SelectListItem { Text = "Select designation...", Value=""},
+        new SelectListItem { Text = "Software Engineer", Value="se"},
+        new SelectListItem { Text = "Sr. Software Engineer", Value="sse"},
+        new SelectListItem { Text = "Principal Engineer", Value="pe"},
+        new SelectListItem { Text = "Software Architect", Value="sa"},
+    };
 }
 
 <div class="card border-2">
@@ -56,13 +70,13 @@
             <div class="col-md-6">
                 <label asp-for=Department class="form-label"></label>
                 <span asp-validation-for="Department" class="text-danger"></span>
-                <input asp-for=Department class="form-control">
+                <select asp-for=Department asp-items=departments class="form-control"></select>
             </div>
 
             <div class="col-md-6">
                 <label asp-for=Designation class="form-label"></label>
                 <span asp-validation-for="Designation" class="text-danger"></span>
-                <input asp-for=Designation class="form-control">
+                <select asp-for=Designation asp-items=designations class="form-control"></select>
             </div>
 
             <div class="col-md-12">

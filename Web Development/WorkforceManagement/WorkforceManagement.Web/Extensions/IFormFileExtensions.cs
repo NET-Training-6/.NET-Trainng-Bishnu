@@ -1,7 +1,7 @@
 ﻿namespace WorkforceManagement.Web.Helpers;
-public class ProfileImageHelper
+public static class IFormFileExtensions
 {
-    public static string SaveImage(IFormFile profileImage)
+    public static string SaveImage(this IFormFile profileImage)
     {
         // Save profile image to some location
         var fileName = profileImage.FileName;   
