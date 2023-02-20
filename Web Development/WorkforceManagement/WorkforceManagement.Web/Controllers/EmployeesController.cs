@@ -15,15 +15,7 @@ public class EmployeesController : Controller
     public IActionResult Index()
     {
         List<Employee> employees = db.Employees.ToList();
-        List<EmployeeViewModel> employeesViewModels = employees.Select(x => new EmployeeViewModel() 
-        {
-            Address= x.Address,
-            Contact = x.Contact,
-            Department= x.Department,
-            Designation = x.Designation,
-            Dob = x.Dob
-        }).ToList();
-
+        List<EmployeeViewModel> employeesViewModels = EmployeeMapper.MapToViewModel(employees);
         return View(employeesViewModels);
     }
 
@@ -58,7 +50,8 @@ public class EmployeesController : Controller
     public IActionResult Edit(int id)
     {
         var employee = db.Employees.Find(id);
-        return View(employee);
+        var employeeViewModel = EmployeeMapper.MapToViewModel(employee);
+        return View(employeeViewModel);
     }
 
     [HttpPost]
@@ -78,12 +71,14 @@ public class EmployeesController : Controller
     public IActionResult Delete(int id)
     {
         var employee = db.Employees.Find(id);
-        return View(employee);
+        var employeeViewModel = EmployeeMapper.MapToViewModel(employee);
+        return View(employeeViewModel);
     }
 
     [HttpPost]
-    public IActionResult Delete(Employee employee)
+    public IActionResult Delete(EmployeeViewModel employeeViewModel)
     {
+        var employee = EmployeeMapper.MapToModel(employeeViewModel);
         db.Employees.Remove(employee);
         db.SaveChanges();
 

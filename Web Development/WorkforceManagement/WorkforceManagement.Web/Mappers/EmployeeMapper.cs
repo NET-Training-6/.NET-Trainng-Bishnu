@@ -22,5 +22,30 @@ namespace WorkforceManagement.Web.Mappers
             };
             return employee;
         }
+
+        public static EmployeeViewModel MapToViewModel(Employee employee)
+        {
+            var employeeViewModel = new EmployeeViewModel
+            {
+                Id = employee.Id,
+                Name = employee.Name,
+                Address = employee.Address,
+                Contact = employee.Contact,
+                Department = employee.Department,
+                Designation = employee.Designation,
+                Dob = employee.Dob,
+                Gender = employee.Gender,
+                JoinDate = employee.JoinDate,
+                ProfileImagePath = employee.ProfileImagePath
+            };
+
+            return employeeViewModel;
+        }
+
+        public static List<EmployeeViewModel> MapToViewModel(List<Employee> employees)
+        {
+            var employeeViewModels = employees.Select(emp => MapToViewModel(emp)).ToList();
+            return employeeViewModels;
+        }
     }
 }
