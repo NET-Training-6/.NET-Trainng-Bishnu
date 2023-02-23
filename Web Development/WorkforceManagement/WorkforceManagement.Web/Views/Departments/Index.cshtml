@@ -1,0 +1,23 @@
+﻿@using WorkforceManagement.Web.Models;
+@model List<Department>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Established</th>
+        <th></th>
+    </tr>
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Name</td>
+            <td>@department.Description</td>
+            <td>@department.Established</td>
+            <td>
+                <a href="/employees/edit/@department.Id"><i class="bi bi-pen text-warning"></i></a>
+                <a href="/employees/delete/@department.Id"><i class="bi bi-trash text-danger"></i></a>
+            </td>
+        </tr>
+    }
+</table>
