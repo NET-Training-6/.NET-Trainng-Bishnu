@@ -15,7 +15,7 @@ public class EmployeesController : Controller
     public IActionResult Index()
     {
         List<Employee> employees = db.Employees.ToList();
-        List<EmployeeViewModel> employeesViewModels = EmployeeMapper.MapToViewModel(employees);
+        List<EmployeeViewModel> employeesViewModels = employees.MapToViewModel();
         return View(employeesViewModels);
     }
 
@@ -23,8 +23,8 @@ public class EmployeesController : Controller
     public IActionResult Details(int id) 
     {
         var employee = db.Employees.Find(id);
-
-        return View(employee);
+        var employeeViewModel = employee.MapToViewModel();
+        return View(employeeViewModel);
     }
 
     [HttpGet]
@@ -38,7 +38,7 @@ public class EmployeesController : Controller
     {
         var relativePath = employeeViewModel.ProfileImage?.SaveImage();
 
-        var employee = EmployeeMapper.MapToModel(employeeViewModel);
+        var employee = employeeViewModel.MapToModel();
 
         employee.ProfileImagePath = relativePath;
         db.Employees.Add(employee);
@@ -50,7 +50,7 @@ public class EmployeesController : Controller
     public IActionResult Edit(int id)
     {
         var employee = db.Employees.Find(id);
-        var employeeViewModel = EmployeeMapper.MapToViewModel(employee);
+        var employeeViewModel = employee.MapToViewModel();
         return View(employeeViewModel);
     }
 
@@ -60,7 +60,7 @@ public class EmployeesController : Controller
         var relativePath = employeeViewModel.ProfileImage?.SaveImage();
         employeeViewModel.ProfileImagePath = relativePath;
 
-        var employee = EmployeeMapper.MapToModel(employeeViewModel);
+        var employee = employeeViewModel.MapToModel();
 
         db.Employees.Update(employee);
         db.SaveChanges();
@@ -71,14 +71,14 @@ public class EmployeesController : Controller
     public IActionResult Delete(int id)
     {
         var employee = db.Employees.Find(id);
-        var employeeViewModel = EmployeeMapper.MapToViewModel(employee);
+        var employeeViewModel = employee.MapToViewModel();
         return View(employeeViewModel);
     }
 
     [HttpPost]
     public IActionResult Delete(EmployeeViewModel employeeViewModel)
     {
-        var employee = EmployeeMapper.MapToModel(employeeViewModel);
+        var employee = employeeViewModel.MapToModel();
         db.Employees.Remove(employee);
         db.SaveChanges();
 

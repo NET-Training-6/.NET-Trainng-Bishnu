@@ -3,9 +3,9 @@ using WorkforceManagement.Web.ViewModels;
 
 namespace WorkforceManagement.Web.Mappers
 {
-    public class EmployeeMapper
+    public static class EmployeeMapper
     {
-        public static Employee MapToModel(EmployeeViewModel employeeViewModel)
+        public static Employee MapToModel(this EmployeeViewModel employeeViewModel)
         {
             var employee = new Employee
             {
@@ -23,7 +23,7 @@ namespace WorkforceManagement.Web.Mappers
             return employee;
         }
 
-        public static EmployeeViewModel MapToViewModel(Employee employee)
+        public static EmployeeViewModel MapToViewModel(this Employee employee)
         {
             var employeeViewModel = new EmployeeViewModel
             {
@@ -42,7 +42,7 @@ namespace WorkforceManagement.Web.Mappers
             return employeeViewModel;
         }
 
-        public static List<EmployeeViewModel> MapToViewModel(List<Employee> employees)
+        public static List<EmployeeViewModel> MapToViewModel(this List<Employee> employees)
         {
             var employeeViewModels = employees.Select(emp => MapToViewModel(emp)).ToList();
             return employeeViewModels;
