@@ -11,4 +11,10 @@ public class DepartmentsController : Controller
         var departments = db.Departments.ToList();
         return View(departments);
     }
+
+    public IActionResult Add()
+    {
+        return View();
+    }
+
 }
