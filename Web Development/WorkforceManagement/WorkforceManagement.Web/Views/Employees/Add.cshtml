@@ -2,13 +2,7 @@
 
 @{
     string[] genders = Enum.GetNames<Gender>();
-    SelectListItem[] departments =
-    {
-        new SelectListItem { Text = "Select department...", Value=""},
-        new SelectListItem { Text = "Research & Development", Value="rnd"},
-        new SelectListItem { Text = "Operations", Value="operations"},
-        new SelectListItem { Text = "IT", Value="it"}
-    };
+    var departments = ViewData["deps"] as IEnumerable<SelectListItem>;
 
     SelectListItem[] designations =
     {

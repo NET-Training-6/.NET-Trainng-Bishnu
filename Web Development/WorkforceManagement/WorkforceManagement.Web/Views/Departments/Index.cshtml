@@ -1,5 +1,4 @@
-﻿@using WorkforceManagement.Web.Models;
-@model List<Department>
+﻿@model List<Department>
 
 <table class="table">
     <tr>
@@ -13,7 +12,7 @@
         <tr>
             <td>@department.Name</td>
             <td>@department.Description</td>
-            <td>@department.Established</td>
+            <td>@department.Established.ToString("MMM dd, yyyy")</td>
             <td>
                 <a href="/employees/edit/@department.Id"><i class="bi bi-pen text-warning"></i></a>
                 <a href="/employees/delete/@department.Id"><i class="bi bi-trash text-danger"></i></a>

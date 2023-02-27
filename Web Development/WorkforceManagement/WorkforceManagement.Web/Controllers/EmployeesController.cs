@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data.SqlClient;
 using WorkforceManagement.Web.Data;
 using WorkforceManagement.Web.Helpers;
@@ -30,6 +31,11 @@ public class EmployeesController : Controller
     [HttpGet]
     public IActionResult Add()
     {
+        var departments = db.Departments.ToList();
+        var depsSelectList = departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+        depsSelectList.Add(new SelectListItem { Text = "Select Department...", Selected = true });
+        ViewData["Deps"] = depsSelectList;
+
         return View();
     }
 
@@ -44,7 +50,7 @@ public class EmployeesController : Controller
         db.Employees.Add(employee);
         db.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction(nameof(Index));
     }
 
     public IActionResult Edit(int id)
@@ -65,7 +71,7 @@ public class EmployeesController : Controller
         db.Employees.Update(employee);
         db.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction(nameof(Index));
     }
 
     public IActionResult Delete(int id)
@@ -82,7 +88,7 @@ public class EmployeesController : Controller
         db.Employees.Remove(employee);
         db.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction(nameof(Index));
     }
 
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WorkforceManagement.Web.Data;
+using WorkforceManagement.Web.Models;
 
 namespace WorkforceManagement.Web.Controllers;
 
@@ -17,4 +18,15 @@ public class DepartmentsController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult Add(Department department)
+    {
+        if (department is null && !ModelState.IsValid)
+            return Problem("To be inserted department object is null");
+
+        db.Departments.Add(department);
+        db.SaveChanges();
+
+        return RedirectToAction(nameof(Index));
+    }
 }

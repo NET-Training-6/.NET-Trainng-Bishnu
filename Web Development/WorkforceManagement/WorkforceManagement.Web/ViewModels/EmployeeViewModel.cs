@@ -21,7 +21,9 @@ public class EmployeeViewModel
     [DisplayName("Join Date"), DataType(DataType.Date)]
     public DateTime JoinDate { get; set; }
 
-    public string Department { get; set; } = string.Empty;
+    public int Department { get; set; }
+    public string DepartmentName { get; set; }
+
     public string Designation { get; set; } = string.Empty;
 
     [DisplayName("Your Profile Image")]

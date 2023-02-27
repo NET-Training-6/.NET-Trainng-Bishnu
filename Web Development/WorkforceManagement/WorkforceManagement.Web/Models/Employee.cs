@@ -10,7 +10,9 @@ public class Employee
     public DateTime Dob { get; set; }
     public string Contact { get; set; } = string.Empty;
     public DateTime JoinDate { get; set; }
-    public string Department { get; set; } = string.Empty;
     public string Designation { get; set; } = string.Empty;
     public string ProfileImagePath { get; set; } = string.Empty;
+
+    public int? DepartmentId { get; set; }
+    public Department Department { get; set; }
 }
