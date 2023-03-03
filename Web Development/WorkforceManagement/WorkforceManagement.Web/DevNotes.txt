@@ -13,3 +13,37 @@ Data Access (Datbase Programming)
 -- Databases
 --- Relational Dbs: *Microsoft SQL Server, SQLite, Postgres, MySql, Oracle etc. 
 --- No Sql Dbs: MongoDb, AWS DynamoDb etc.
+
+
+Data formats
+
+XML
+=======
+<emp>
+	<name>bishnu</name>
+	<name>bishnu</name>
+	<name>bishnu</name>
+	<name>bishnu</name>
+</emp>
+<emp>
+	<name>bishnu</name>
+	<name>bishnu</name>
+	<name>bishnu</name>
+	<name>bishnu</name>
+</emp>
+
+JSON
+===========
+[{
+	"name": "bishnu",	
+	"name": "bishnu",	
+	"name": "bishnu",	
+	"age": 56,	
+},
+{
+	"name": "bishnu",	
+	"name": "bishnu",	
+	"name": "bishnu",	
+	"age": 56,	
+}]
+

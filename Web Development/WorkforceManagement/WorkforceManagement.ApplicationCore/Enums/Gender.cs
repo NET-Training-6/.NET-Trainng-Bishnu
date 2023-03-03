@@ -1,4 +1,4 @@
-﻿namespace WorkforceManagement.Web.Enums;
+﻿namespace WorkforceManagement.ApplicationCore.Enums;
 public enum Gender
 {
     Male = 1,

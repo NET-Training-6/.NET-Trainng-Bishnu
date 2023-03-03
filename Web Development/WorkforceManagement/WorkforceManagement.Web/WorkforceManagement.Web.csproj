@@ -25,4 +25,9 @@
 	  <Folder Include="wwwroot\images\profiles\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\WorkforceManagement.ApplicationCore\WorkforceManagement.ApplicationCore.csproj" />
+	  <ProjectReference Include="..\WorkforceMangement.Infrastructure\WorkforceMangement.Infrastructure.csproj" />
+	</ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using WorkforceManagement.Web.Enums;
+using WorkforceManagement.ApplicationCore.Enums;
 
 namespace WorkforceManagement.Web.ViewModels;
 public class EmployeeViewModel

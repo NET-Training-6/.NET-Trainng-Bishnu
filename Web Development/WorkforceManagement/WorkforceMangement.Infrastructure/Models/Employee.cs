@@ -1,4 +1,4 @@
-﻿using WorkforceManagement.Web.Enums;
+﻿using WorkforceManagement.ApplicationCore.Enums;
 
 namespace WorkforceManagement.Web.Models;
 public class Employee
