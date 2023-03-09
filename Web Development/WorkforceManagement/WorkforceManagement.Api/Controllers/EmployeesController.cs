@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WorkforceManagement.Web.Data;
+using WorkforceManagement.Web.Models;
 
 namespace WorkforceManagement.Api.Controllers;
 
@@ -25,6 +27,40 @@ public class EmployeesController : ControllerBase
             return NotFound($"Employee with id {id} does not exist.");
 
         return Ok(employee);
+    }
+
+    [HttpPost]
+    public IActionResult Post(Employee employee)
+    {
+        if (employee == null)
+            return BadRequest();
+
+        context.Employees.Add(employee);
+        context.SaveChanges();
+
+        return Created($"api/employees/{employee.Id}", null);
+    }
+
+    [HttpPut]
+    public IActionResult Put(Employee employee)
+    {
+        context.Employees.Update(employee);
+        context.SaveChanges();
+
+        return NoContent();
+    }
+
+    [HttpDelete]
+    public IActionResult Delete(int id)
+    {
+        var employee = context.Employees.Find(id);
+        if (employee == null)
+            return BadRequest("Employee id you provided does not exist.");
+
+        context.Employees.Remove(employee);
+        context.SaveChanges();
+
+        return NoContent();
     }
 }
 

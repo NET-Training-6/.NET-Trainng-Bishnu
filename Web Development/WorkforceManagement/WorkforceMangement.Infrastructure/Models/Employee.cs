@@ -14,5 +14,5 @@ public class Employee
     public string ProfileImagePath { get; set; } = string.Empty;
 
     public int? DepartmentId { get; set; }
-    public Department Department { get; set; }
+    public Department? Department { get; set; }
 }
