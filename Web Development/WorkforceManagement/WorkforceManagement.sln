@@ -5,11 +5,11 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceManagement.Web", "WorkforceManagement.Web\WorkforceManagement.Web.csproj", "{F9F1FEAF-C75D-4218-92E3-1A823DC35418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkforceManagement.ApplicationCore", "WorkforceManagement.ApplicationCore\WorkforceManagement.ApplicationCore.csproj", "{16D0D563-76BA-4214-88B7-B515B198FE95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceManagement.ApplicationCore", "WorkforceManagement.ApplicationCore\WorkforceManagement.ApplicationCore.csproj", "{16D0D563-76BA-4214-88B7-B515B198FE95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkforceMangement.Infrastructure", "WorkforceMangement.Infrastructure\WorkforceMangement.Infrastructure.csproj", "{429FDF32-DB67-4048-8880-32A0E75BCD73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceMangement.Infrastructure", "WorkforceMangement.Infrastructure\WorkforceMangement.Infrastructure.csproj", "{429FDF32-DB67-4048-8880-32A0E75BCD73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkforceManagement.Api", "WorkforceManagement.Api\WorkforceManagement.Api.csproj", "{3C66FE06-72FC-42F7-864C-300622EB7491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceManagement.Api", "WorkforceManagement.Api\WorkforceManagement.Api.csproj", "{3C66FE06-72FC-42F7-864C-300622EB7491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

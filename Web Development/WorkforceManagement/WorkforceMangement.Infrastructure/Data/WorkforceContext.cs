@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WorkforceManagement.Web.Models;
 
 namespace WorkforceManagement.Web.Data;
-public class WorkforceContext: DbContext
+public class WorkforceContext: IdentityDbContext
 {
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Department> Departments { get; set; }
