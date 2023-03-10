@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using WorkforceManagement.Web.Controllers;
 using WorkforceManagement.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<WorkforceContext>();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<WorkforceContext>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

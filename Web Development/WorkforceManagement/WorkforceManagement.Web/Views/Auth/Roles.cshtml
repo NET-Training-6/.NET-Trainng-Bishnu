@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model List<IdentityRole>
+
+<h3>All roles - @Model.Count</h3>
+
+<a class="btn btn-success" href="/auth/addrole">Add New Role</a>
+
+<ol>
+@foreach(var role in Model)
+{
+    <li>@role.Name</li>
+}
+</ol>

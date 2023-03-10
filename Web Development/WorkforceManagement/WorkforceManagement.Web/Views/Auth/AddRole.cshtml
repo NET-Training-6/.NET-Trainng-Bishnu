@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@model IdentityRole
+
+<form asp-action="AddRole" method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+
+    <button type="submit" class="btn btn-success form-control mt-3">Add</button>
+</form>
