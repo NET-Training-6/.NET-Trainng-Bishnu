@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceMangement.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkforceManagement.Api", "WorkforceManagement.Api\WorkforceManagement.Api.csproj", "{3C66FE06-72FC-42F7-864C-300622EB7491}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Server", "..\BlazorApp1\Server\BlazorApp1.Server.csproj", "{1BDAE7A9-A8C2-44BD-812D-DA4BD1BF5ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Client", "..\BlazorApp1\Client\BlazorApp1.Client.csproj", "{ECC207AA-A721-47DE-9B3E-99851E1C042B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Shared", "..\BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{1F08CDC8-3EF0-44E7-BB48-9C740D3F88FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{3C66FE06-72FC-42F7-864C-300622EB7491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C66FE06-72FC-42F7-864C-300622EB7491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C66FE06-72FC-42F7-864C-300622EB7491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDAE7A9-A8C2-44BD-812D-DA4BD1BF5ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDAE7A9-A8C2-44BD-812D-DA4BD1BF5ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDAE7A9-A8C2-44BD-812D-DA4BD1BF5ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDAE7A9-A8C2-44BD-812D-DA4BD1BF5ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC207AA-A721-47DE-9B3E-99851E1C042B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC207AA-A721-47DE-9B3E-99851E1C042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC207AA-A721-47DE-9B3E-99851E1C042B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC207AA-A721-47DE-9B3E-99851E1C042B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F08CDC8-3EF0-44E7-BB48-9C740D3F88FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F08CDC8-3EF0-44E7-BB48-9C740D3F88FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F08CDC8-3EF0-44E7-BB48-9C740D3F88FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F08CDC8-3EF0-44E7-BB48-9C740D3F88FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WorkforceManagement.Web.Data;
 using WorkforceManagement.Web.Models;
 
@@ -7,9 +8,9 @@ namespace WorkforceManagement.Web.Controllers;
 public class DepartmentsController : Controller
 {
     WorkforceContext db = new WorkforceContext();
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        var departments = db.Departments.ToList();
+        var departments = await db.Departments.ToListAsync(); // 5 sec
         return View(departments);
     }
 

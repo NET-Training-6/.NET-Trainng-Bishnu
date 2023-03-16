@@ -47,3 +47,8 @@ JSON
 	"age": 56,	
 }]
 
+
+Deployment (Publish)
+===========================
+
+- Physical server (machine) with web server tools (IIS, Nginx, apache) installation

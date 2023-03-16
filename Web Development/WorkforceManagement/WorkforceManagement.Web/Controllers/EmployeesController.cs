@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data.SqlClient;
 using WorkforceManagement.Web.Data;
@@ -9,6 +10,7 @@ using WorkforceManagement.Web.ViewModels;
 
 namespace WorkforceManagement.Web.Controllers;
 
+[Authorize]
 public class EmployeesController : Controller
 {
     WorkforceContext db;
@@ -29,7 +31,7 @@ public class EmployeesController : Controller
     }
 
     [HttpGet]
-    public IActionResult Details(int id) 
+    public IActionResult Details(int id)
     {
         var employee = db.Employees.Find(id);
         var employeeViewModel = employee.MapToViewModel();
@@ -100,19 +102,19 @@ public class EmployeesController : Controller
     }
 
 
-    public IActionResult GetData()
+    public IActionResult GetData()//345;drop table Employee;
     {
         List<Employee> employees = new List<Employee>();
 
-        string connectionString = 
+        string connectionString =
             @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Workforce_Test;Integrated Security=true;";
 
         string queryString = "SELECT * from dbo.Employee";
-        
+
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             SqlCommand command = new SqlCommand(queryString, connection);
-        
+
             try
             {
                 connection.Open();
@@ -121,8 +123,8 @@ public class EmployeesController : Controller
                 {
                     var employee = new Employee()
                     {
-                        Name =  reader.GetString(1),
-                        Dob =  reader.GetDateTime(3),
+                        Name = reader.GetString(1),
+                        Dob = reader.GetDateTime(3),
                         //Gender = reader.GetFieldValue<Gender>(2),
                         Contact = reader.GetString(4)
                     };
